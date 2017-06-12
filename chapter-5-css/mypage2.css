@@ -1,0 +1,22 @@
+li {
+    color: #e90006;
+}
+
+h1 {
+    color: #1800ff;
+    background: #afe982;
+    border-color: chocolate;
+    border-width: 5px;
+    border-style: solid;
+}
+
+h4 {
+    border: dashed aqua;
+    background: #e9006e;
+}
+
+body{
+    background: pink;
+/*    background: url(http://7bna.net/images/images-of-snow/images-of-snow-13.jpg);
+    background-repeat: no-repeat;*/
+}

@@ -1,0 +1,43 @@
+/*Element*/
+li {
+
+}
+/*class*/
+.hello {
+
+}
+/*id*/
+#name {
+
+}
+
+/*Star: everything in html */
+
+* {
+    border: 1px solid lightgrey;
+}
+
+/*Descendant Selector: element a inside element li*/
+
+li a {
+    color: red;
+}
+
+/*Adjacent Selector element ul following element h4 on the same level, not nested*/
+
+h4 + ul {
+    border: 4px solid red;
+}
+
+
+/*Attribute Selector: when element a has attribute with these properties, e.g. has link google.com*/
+
+a[href="http://www.google.com"] {
+    background: blue;
+}
+
+/*nth of type. Affects every n-th element, but in the group, e.g. in list*/
+
+li:nth-of-type(odd){
+    background: purple;
+}

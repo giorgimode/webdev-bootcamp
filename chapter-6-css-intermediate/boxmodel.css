@@ -1,0 +1,10 @@
+p:nth-of-type(2) {
+    border: 2px solid blue;
+    width: 200px;
+    padding-left: 40px;
+    /*margin: 100px 50px 40px 20px;*/
+    /*margin: 0 auto 0 auto;*/
+    margin: 0 auto;
+
+
+}

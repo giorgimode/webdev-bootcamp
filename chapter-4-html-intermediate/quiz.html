@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body>
+<h1>Register</h1>
+
+<form action="/myquiz">
+
+    <label for="firstNameId">First Name:</label>
+    <input id="firstNameId" name="firstName" type="text" placeholder="John" required>
+    <label for="lastNameId">Last Name:</label>
+    <input id="lastNameId" name="lastName" type="text" placeholder="Smith" required>
+    <div>
+        <label for="radButtonId1">Male</label>
+        <input id="radButtonId1" name="gender" type="radio" value="male">
+
+        <label for="radButtonId2">Female</label>
+        <input id="radButtonId2" name="gender" type="radio" value="female">
+
+        <label for="radButtonId3">Other</label>
+        <input id="radButtonId3" name="gender" type="radio" value="other">
+    </div>
+    <div>
+        <label for="emailId">Email:</label>
+        <input id="emailId" name="email" type="email" placeholder="example@mail.com" required>
+
+        <label for="passwordId">Password:</label>
+        <input id="passwordId" name="password" type="password" pattern=".{6,12}" required title="Please enter password from 6 to 12">
+    </div>
+    <div>
+        <label>
+            Birthday:
+            <select name="Day" id="birthdayId">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>...</option>
+                <option>31</option>
+            </select>
+            <select name="Month">
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>...</option>
+                <option>December</option>
+            </select>
+            <select name="Year">
+                <option>1940</option>
+                <option>1941</option>
+                <option>1942</option>
+                <option>...</option>
+                <option>2017</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label for="conditionsId">I agree to terms and conditions</label>
+        <input id="conditionsId" name="conditions" type="checkbox">
+    </div>
+    <input type="submit" id="submitId" value="Submit">
+
+</form>
+</body>
+</html>

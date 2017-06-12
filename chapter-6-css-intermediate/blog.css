@@ -1,0 +1,49 @@
+body {
+    border: 20px solid #bdc3c7;
+    max-width: 900px;
+    width: 80%;
+    margin: 20px 20% auto 20%;
+    font-family: Source Sans Pro;
+    padding: 20px;
+    align-content: left;
+}
+
+h2 {
+    color: #2c3e50;
+    text-transform: capitalize;
+    font-size: 2.0rem;
+}
+
+.intro {
+    border-left: 5px solid #bdc3c7;
+    padding-left: 5px;
+}
+
+.date {
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #3498db;
+}
+
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: #8c8b8b;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.post {
+    margin-bottom: 20px;
+}

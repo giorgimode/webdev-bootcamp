@@ -1,0 +1,11 @@
+li {
+    border: 2px solid red;
+}
+
+#beer {
+    background: forestgreen;
+}
+
+.underline{
+    text-decoration: line-through;
+}
