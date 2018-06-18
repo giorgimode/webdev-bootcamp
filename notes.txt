@@ -97,3 +97,28 @@ var logo = document.querySelector("#hplogo");
 logo.addEventListener("mouseover", function(){
 console.log("WOW YOU ARE HOVERING");
 });
+
+--------------
+
+var giorgi = {
+firstName: "Giorgi";
+
+calculateNumbers::function(a,b,c) {
+   return this.firstName + " just calculated " + (a+b+c);
+}
+
+sayHello::function(secondName) {
+   return "Hello " + this.firstName + " " + secondName;
+}
+}
+
+var tatia = {
+firstName: "Tatia";
+}
+
+giorgi.sayHello.call(tatia, "Sikha"); //Hello Tatia Sikha
+giorgi.calculateNumbers.apply(tatia, [1,2,3]); //Tatia just calculated 6
+
+var helloFromTatia = giorgi.calculateNumbers.bind(tatia, 1,5); //does not call method
+helloFromTatia(7); //returns 'Tatia just calculated 13'. Equal to giorgi.calculateNumbers.bind(tatia, 1,5,7)
+-----------------
