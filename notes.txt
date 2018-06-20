@@ -122,3 +122,5 @@ giorgi.calculateNumbers.apply(tatia, [1,2,3]); //Tatia just calculated 6
 var helloFromTatia = giorgi.calculateNumbers.bind(tatia, 1,5); //does not call method
 helloFromTatia(7); //returns 'Tatia just calculated 13'. Equal to giorgi.calculateNumbers.bind(tatia, 1,5,7)
 -----------------
+Unlike Fetch API, in jQuery we do not need to specify datatype explicitly and then parse it. jQuery will make an
+'intelligent guess' (default: Intelligent Guess (xml, json, script, or html)). No need to parse it it.
