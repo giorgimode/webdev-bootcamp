@@ -7,7 +7,7 @@ var display = document.querySelector("#quote");
 xhrbtn.addEventListener("click", function(){
 	var XHR = new XMLHttpRequest();
 	XHR.onreadystatechange = function(){
-		if(XHR.readyState == 4 && XHR.status == 200){
+		if(XHR.readyState === 4 && XHR.status === 200){
 			var quote = JSON.parse(XHR.responseText)[0];
 			display.innerText = quote;
 		}
