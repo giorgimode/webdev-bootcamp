@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.2/jasmine.css">
+</head>
+<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.2/jasmine.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.2/jasmine-html.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/2.6.2/boot.js"></script>
+	<script>
+		describe("Manually ticking the Jasmine Clock", function() {
+			var timerCallback;
+			beforeEach(function() {
+				timerCallback = jasmine.createSpy("timerCallback");
+				jasmine.clock().install();
+			});
+			it("causes a timeout to be called synchronously", function() {
+				setTimeout(function() {
+					timerCallback();
+				}, 100);
+
+				expect(timerCallback).not.toHaveBeenCalled();
+
+				jasmine.clock().tick(101);
+
+				expect(timerCallback).toHaveBeenCalled();
+			});
+
+			xit("causes an interval to be called synchronously", function() {
+				setInterval(function() {
+					timerCallback();
+				}, 100);
+
+				expect(timerCallback).not.toHaveBeenCalled();
+
+				jasmine.clock().tick(101);
+				expect(timerCallback.calls.count()).toEqual(1);
+
+				jasmine.clock().tick(50);
+				expect(timerCallback.calls.count()).toEqual(1);
+
+				jasmine.clock().tick(50);
+				expect(timerCallback.calls.count()).toEqual(2);
+			});
+		});
+	</script>
+</body>
+</html>
