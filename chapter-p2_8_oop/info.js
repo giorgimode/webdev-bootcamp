@@ -12,3 +12,46 @@
  3. Anytime an object is created using the 'new' keyword, a property called "__proto__" gets created, linking the object
  and the prototype property of the constructor function
  * */
+
+/**
+ * In JS injeritance we do not pass one constructor to another. We pass prototype property from one constructor to another
+ *
+ * Object.create
+ Creates a brand new function and accepts as its first parameter, what the prototype object should be for the newly created object.
+ * */
+
+function Person(firstName, lastName) {
+	this.firstName = firstName;
+	this.lastName = lastName;
+}
+
+Person.prototype.sayHi = function () {
+	return "Hello " + this.firstName + " " + this.lastName;
+}
+
+function Student(firstName, lastName) {
+	return Person.apply(this, arguments);
+}
+
+Student.prototype = Object.create(Person.prototype);
+
+// Why not 'new'?
+Student.prototype = new Person;
+/**
+ * This will do almost the same thing, but add additional unnecessary properties on the prototype object
+ * (since it is creating an object with undefined properties just for the prototype).
+ * */
+
+Student.prototype = Object.create(Person.prototype);
+/**
+ * After creating a Student prototype from Person, constructor on prototype of Student will be referring to Person */
+Student.prototype.constructor; // Person
+// to fix this problem, we need to reset the constructor:
+Student.prototype.constructor = Student;
+
+/**
+ * Two parts of inheritance
+ 1. Set the prototype to be an object created with another prototype
+ 2. Reset the constructor property
+ *
+ * */
