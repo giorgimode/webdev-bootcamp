@@ -22,7 +22,7 @@ var instructor = {
 	}
 }
 
-// ES2015 - do NOT use arrow functions here!
+// ES2015 - do NOT use arrow functions here, because keyword 'this' will not reference the object if used here
 var instructor = {
 	sayHello(){
 		return "Hello!";

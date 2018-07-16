@@ -43,7 +43,7 @@ var sumArguments = (...args) => args.reduce((acc, next) => acc + next);
 // three dot operator used outside parameter is called a SPREAD
 /**
  Used on arrays to spread each value out (as a comma separated value)
- Useful when you have an array, but what you are working with expects comma separated values
+ Useful when you have an array, but what you are working with a function that expects comma separated values
  * */
 // ES5
 var arr1 = [1,2,3];
