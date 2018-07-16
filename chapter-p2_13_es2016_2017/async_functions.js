@@ -41,9 +41,7 @@ class MovieData {
 	}
 }
 
-var m = new MovieData('shrek');
-m.getMovie();
-
+var movieCollector = new MovieData('shrek');
 movieCollector.getMovie();
 
 // error handling

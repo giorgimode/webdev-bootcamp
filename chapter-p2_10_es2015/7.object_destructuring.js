@@ -61,7 +61,7 @@ console.log(a); // 1
 console.log(b); // 3
 
 // Object destructuring
-// Note tham new variables have same names
+// Note that new variables have same names
 var o = {p: 42, q: true};
 var {p, q} = o;
 
@@ -100,7 +100,7 @@ function drawES5Chart(options) {
 }
 
 /**
- * In the function signature for drawES2015Chart above, the destructured left-hand side is assigned to an empty object
+ * In the function signature for drawES2015Chart below, the destructured left-hand side is assigned to an empty object
  * literal on the right-hand side: {size = 'big', cords = {x: 0, y: 0}, radius = 25} = {}. You could have also written
  * the function without the right-hand side assignment. However, if you leave out the right-hand side assignment,
  * the function will look for at least one argument to be supplied when invoked, whereas in its current form,
@@ -131,7 +131,7 @@ var {title: englishTitle, translations: [{title: localeTitle}]} = metadata;
 console.log(englishTitle); // "Scratchpad"
 console.log(localeTitle);  // "JavaScript-Umgebung"
 
-//Array destructuring (mind the brackets instead of curly brackets used for object destructuring)
+//Array destructuring (mind the brackets used here instead of curly brackets used for object destructuring)
 var foo = ['one', 'two', 'three'];
 
 var [one, two, three] = foo;

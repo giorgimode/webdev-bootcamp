@@ -36,11 +36,11 @@ function Student(firstName, lastName) {
 Student.prototype = Object.create(Person.prototype);
 
 // Why not 'new'?
-Student.prototype = new Person;
 /**
  * This will do almost the same thing, but add additional unnecessary properties on the prototype object
  * (since it is creating an object with undefined properties just for the prototype).
  * */
+Student.prototype = new Person;
 
 Student.prototype = Object.create(Person.prototype);
 /**
