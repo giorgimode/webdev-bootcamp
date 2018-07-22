@@ -11,8 +11,8 @@
 // --------------
 // arrays can hold any type of data:
 var myArray = [true, 4, "name", null];
----
-	array.push() // add at the end
+
+array.push() // add at the end
 array.pop() // remove the last
 array.unshift(value) //add to first
 array.shift() //remove first
@@ -34,7 +34,7 @@ myArray.forEach(function (item, i) {
 	console.log(item);
 	console.log("index is " + i);
 });
----------
+//---------
 	/************custom array function:*********/
 //1) add new function to prototype
 	Array.prototype.myForEach = function (func) {
@@ -48,9 +48,9 @@ var colors = ["red", "orange", "yellow", "green", "blue", "PURPLE"];
 colors.myForEach(function (color) {
 	console.log(color);
 });
------------------
+// -----------------
 
-	myObject._normalField //-> VALID
+myObject._normalField; //-> VALID
 myObject.normalField //-> VALID
 myObject.notNormalField //-> INVALID
 myObject["3notNormalFiel"] //-> VALID
@@ -64,10 +64,10 @@ __________________
 age = 22
 };
  3) var person = new Object();*/
----------
+//---------
 // document object as js object in browser
 	console.dir(document);
---------
+//--------
 // returns elements in a list if more than one
 	document.URL // current url
 document.links // all links on page
